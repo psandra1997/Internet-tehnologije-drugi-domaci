@@ -13,7 +13,9 @@
                 
                 <div class="flex-auto text-right mt-3">
          <a href="/recept" class="border-b hover:bg-orange-100" style="margin-left:150px ; font-size:25px ; background-color: pink ; border-radius:6px">Novi recept</a>
-                </div>
+         <a href="/api/nagrada" class="border-b hover:bg-orange-100" style="margin-left:150px ; font-size:25px ; background-color: pink ; border-radius:6px">Nagrade</a>
+                  
+        </div>
             </div>
             <table class="" style="margin-left:150px">
                 <thead>
