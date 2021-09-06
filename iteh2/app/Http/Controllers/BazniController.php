@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Nagrada;
 
 class BazniController extends Controller
 {
@@ -15,5 +16,6 @@ class BazniController extends Controller
        ];
        return response()->JSON($response,200);
    }
-   
+
+  
 }

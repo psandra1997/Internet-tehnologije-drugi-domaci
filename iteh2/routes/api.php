@@ -2,8 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controller\RegisterController;
-use App\Http\Controller\NagradaController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\NagradaController;
+use App\Http\Controllers\BazniController;
 use App\Http\Models\User;
 
 /*
@@ -25,5 +26,11 @@ Route::post('/login',[RegisterController::class,'login']);
 
 Route::middleware('auth:api')->group(function () {
   Route::resource('nagradas',NagradaController::class);
+  
 });
+Route::post('/dodaj',[NagradaController::class,'dodajNagradu']);
+Route::get('/nagrada',[NagradaController::class,'listaNagrada']);
+Route::delete('/obrisi/{id}',[NagradaController::class,'obrisiNagradu']);
+Route::get('/nagrada/{naziv}',[NagradaController::class,'vidiNagradu']);
+Route::put('/nagrada/{id}',[NagradaController::class,'izmena']);
 

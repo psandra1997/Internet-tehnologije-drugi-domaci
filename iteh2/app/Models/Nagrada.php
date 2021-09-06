@@ -10,11 +10,9 @@ use App\Models\Recept;
 class Nagrada extends Model
 {
     use HasFactory;
-
-    protected $fillable = [
-        'naziv',
-        'opis',
-    ];
+    protected $table= 'nagradas';
+    protected $fillable =['naziv','opis'];
+    
    
     public function user(){
         return $this->belongsTo(User::class);
