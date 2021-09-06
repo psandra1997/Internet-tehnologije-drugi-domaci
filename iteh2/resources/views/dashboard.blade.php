@@ -9,19 +9,17 @@
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-5">
             <div class="flex">
-                <div class="flex-auto text-2xl mb-4">RECEPTI</div>
+                <div class="flex-auto text-2xl mb-6">RECEPTI</div>
                 
-                <div class="flex-auto text-right mt-2">
-         <a href="/recept" class="border-b hover:bg-orange-100" style="margin-left:450px ; font-size:20px ; background-color: pink ; border-radius:30px">Novi recept</a>
+                <div class="flex-auto text-right mt-3">
+         <a href="/recept" class="border-b hover:bg-orange-100" style="margin-left:150px ; font-size:25px ; background-color: pink ; border-radius:6px">Novi recept</a>
                 </div>
             </div>
-            <table class="w-full text-md rounded mb-4">
+            <table class="" style="margin-left:150px">
                 <thead>
-                <tr class="border-b">
-                    <th class="text-left p-3 px-5">Recept</th>
-                    <th class="text-left p-3 px-5">Izmeni/Obrisi</th>
-                    <!--th class="text-left p-3 px-5">Recept je objavio/la:</th-->
-                    <th></th>
+                <tr class="border-b" >
+                    <th style="margin-left:0px ; background-color: yellow" ></th>
+                    <th style="margin-left:0px ; background-color: #C1A7EB">Recept</th>
                 </tr>
                 </thead>
                 
@@ -39,11 +37,12 @@
                     style="margin-left:450px ; background-color: yellow ; border-radius:40px ; font-size:20px" >Izmeni</a>
                                 <button type="submit" name="delete" formmethod="POST" style=" background-color: red ; border-radius:40px ; font-size:20px" >Obrisi</button>
                                 {{ csrf_field() }}
-                                
-                               
-                              
-                            </form > Objavio/la:
+                                <div style="margin-left:700px">
+                                Objavio/la:
                             {{auth()->user()->name}}
+</div>
+                            </form > <!--Objavio/la:
+                            {{auth()->user()->name}}-->
                         </td>
                        
                     </tr>
